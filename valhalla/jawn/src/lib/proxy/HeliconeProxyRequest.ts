@@ -155,13 +155,13 @@ export class HeliconeProxyRequestMapper {
       this.request.heliconeHeaders.openaiBaseUrl ??
       this.request.heliconeHeaders.targetBaseUrl;
 
-    if (api_base && !this.validateApiConfiguration(api_base)) {
-      // return new Response(`Invalid API base "${api_base}"`, {
-      return {
-        data: null,
-        error: `Invalid API base "${api_base}"`,
-      };
-    }
+    // if (api_base && !this.validateApiConfiguration(api_base)) {
+    //   // return new Response(`Invalid API base "${api_base}"`, {
+    //   return {
+    //     data: null,
+    //     error: `Invalid API base "${api_base}"`,
+    //   };
+    // }
 
     // this is kind of legacy stuff. the correct way to add providers is to add it to `modifyEnvBasedOnPath` (04/28/2024)
     if (api_base) {
